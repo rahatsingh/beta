@@ -1,0 +1,32 @@
+* {
+  background-color: aquamarine;
+  margin-left: 15px;
+}
+#fname {
+  background-color: azure;
+  margin-bottom: 15px;
+}
+#mname {
+  background-color: azure;
+  margin-bottom: 15px;
+}
+#lname {
+  background-color: azure;
+  margin-bottom: 15px;
+}
+#email {
+  background-color: azure;
+  margin-bottom: 15px;
+}
+#fb {
+  background-color: azure;
+  margin-bottom: 15px;
+}
+button {
+  color: black;
+  background-color: blueviolet;
+  margin-bottom: 15px;
+}
+h1 {
+  margin-top: 2%;
+}

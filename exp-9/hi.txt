@@ -1,0 +1,5 @@
+Hye guys!
+This is just a remission of AJAX server in js.
+Where such AJAX IS NOT A PROGRAMMING LANGUAGE BUT ITS A
+PART OF SERVER!
+

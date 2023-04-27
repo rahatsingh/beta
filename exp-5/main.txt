@@ -1,0 +1,37 @@
+1. To create our own database
+ >use db_name
+
+2. to check current db
+>db
+
+3. to check all the databases
+> show dbs
+
+4. create a collection
+ > db.createCollection(“name of your collection e.g. cricketers”) 
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. Insert one:-
+ > db.cricketers.insertOne({ key value pair leke kr lena})
+
+2. Insert Many:-
+ > db.cricketers.insertMany(
+    { key value pair leke kr lena},
+    {key value pair leke kr lena}
+    )
+
+3. Find:-
+ > db.cricketers.find()
+
+4. Update:-
+ > db.cricketers.update({name: ""}, {$set:{jo krna hoga kr dena}})
+
+5. Update Many:-
+ > db.cricketers.updateMany9{country: "India"}, {$set:{league:"IPL"}}
+
+6. Delete
+ > db.cricketers.deleteOne({name: ""})
+
+7. Delete Many
+ > db.cricketers.deleteMany({country:"India"})

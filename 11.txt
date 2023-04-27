@@ -1,0 +1,66 @@
+// index.html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MyFirstProject</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<app-root></app-root>
+</body>
+</html>
+
+
+// app.component.ts
+import { Component } from '@angular/core';
+@Component({
+selector: 'app-root',
+templateUrl: './app.component.html',
+styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+title = 'my-first-project';
+}
+
+
+// app.component.html
+<h1>Hello World</h1>
+<p>This is {{title}}</p>
+<h2>Expression Example to Perform Arithmetic operations</h2>
+<p>{{5+9}}</p>
+<p>{{5-9}}</p>
+<p>{{5*9}}</p>
+<p>{{5/9}}</p>
+
+
+//////////////////////////////////////////////////////////////////////
+ngstyle
+
+// app.component.ts
+import { Component } from '@angular/core';
+@Component({
+selector: 'app-root',
+templateUrl: './app.component.html',
+styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+title = 'Experiment 09';
+myStyle={
+width:"100px",
+height:"40px",
+background:"aqua"
+};
+onClick(){
+this.myStyle['background']="red";
+}
+}
+
+// app.component.html
+
+<h1 >Hello World</h1>
+<p [ngStyle]="myStyle">This is Experiment 09</p>
+<h2 >Color Will change on clicking</h2>
+<button (click)="onClick()">Change Color</button>

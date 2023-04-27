@@ -1,0 +1,79 @@
+// form-validate.component.html
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input required ngModel name="firstname" type="text" pattern="PEPELEVIS" minlength="2" maxlength="20"
+                id="firstname" class="form-control" #fname="ngModel" (click)="showValue(fname)" autocomplete="off">
+            <div class="alert alert-danger" *ngIf="!fname.valid &&
+    fname.touched">
+                <div *ngIf="fname.errors?.['required']">
+                    First Name cannot be Empty!
+                </div>
+                <div *ngIf="fname.errors?.['minlength']">
+                    First Name should be of atleast one character!
+                </div>
+                <div *ngIf="fname.errors?.['pattern']">
+                    First Name should be entered in CAPITAL letters!
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input ngModel name="password" type="text" id="password" class="form-control">
+
+        </div>
+        <div>
+            <input type="submit" name="submit" class="btn btn-success">
+        </div>
+    </form>
+</div>
+
+
+// form-validate.component.ts
+import { Component, OnInit } from '@angular/core';
+@Component({
+    selector: 'app-form-validate',
+    templateUrl: './form-validate.component.html',
+})
+export class FormValidateComponent {
+    showValue(fname: any) {
+        console.log(fname);
+    }
+}
+
+
+// app.component.html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min
+.css" integrity="sha384-
+Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6
+JXm" crossorigin="anonymous">
+<div class="alert alert-warning" role="alert">
+    <h1 class="display-5">Form Validation using Angular</h1>
+</div>
+<app-form-validate> </app-form-validate>
+
+
+// app.module.ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+import { FormValidateComponent } from './form-validate.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    FormValidateComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

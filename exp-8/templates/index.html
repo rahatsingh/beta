@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+
+<body>
+    <h1>Please Provide Your FeedBack</h1>
+    <div class="Form">
+        <form action="{{url_for('feedback')}}" method="post">
+            <label for="fname"><b>First Name</b></label><br>
+            <input type="text" id="fname" placeholder="First Name" name="fname"><br>
+            <label for="mname"><b>Middle Name</b></label><br>
+            <input type="text" id="mname" placeholder="Middle Name" name="mname"><br>
+            <label for="lname"><b>Last Name</b></label><br>
+            <input type="text" id="lname" placeholder="Last Name" name="lname"><br>
+            <label for="email"><b>Email Id:-</b></label><br>
+            <input type="email" id="email" placeholder="Email" name="email"><br>
+            <label for="feedback"><b>Provide Your FeedBack</b></label><br>
+            <textarea id="fb" placeholder="Please write your reviews" rows="15" cols="35"></textarea><br>
+            <p>Please Provide Your Rating:</p>
+            <input type="radio" id="1star" name="star" value="1">
+            <label for="1star">☆</label><br>
+            <input type="radio" id="2star" name="star" value="2">
+            <label for="2star">☆☆</label><br>
+            <input type="radio" id="3star" name="star" value="3">
+            <label for="3star">☆☆☆</label><br>
+            <input type="radio" id="3star" name="star" value="4">
+            <label for="4star">☆☆☆☆</label><br>
+            <input type="radio" id="4star" name="star" value="5">
+            <label for="5star">☆☆☆☆☆</label><br>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
